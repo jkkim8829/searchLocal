@@ -39,7 +39,8 @@ public class APIServiceImpl implements APIService {
         //API에러 리턴 처리
         if(!StringUtils.isEmpty(kakaoVO.getErrorType()) || !StringUtils.isEmpty(naverVO.getErrorCode())) return errorAPI(kakaoVO, naverVO);
 
-        //API 머지
+        //API merge
+        //장소명칭과 도로명 주소 비교를 통한 merge
         LocalDTO local = mergeRespone(kakaoVO, naverVO);
 
         //검색 키워드 등록
@@ -53,6 +54,7 @@ public class APIServiceImpl implements APIService {
         LinkedHashSet<KakaoVO.documents> kakaoSet = new LinkedHashSet<>();
         LinkedHashSet<NaverVO.items> naverSet = new LinkedHashSet<>();
 
+        //정렬하며 순서대로 넣기위한 LinkedHashSet사용(넣은순서대로 출력)
         for (NaverVO.items item : nv.getItems()) {
             naverSet.add(item);
         }
