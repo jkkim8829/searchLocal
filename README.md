@@ -14,6 +14,7 @@ cURL http://localhost:8080/popularSearch?date=3
   - Java11 / SpringBoot / Gradle사용
   - 설계를 통한 동시성 이슈 처리(키워드 검색 날짜 추가)
   - 대용량 트래픽을 위한 WebClient사용(비동기 처리)
+  - 장소 비교방식 장소명칭, 도로명 주소 비교 처리
 
 명세서
 1. 장소 검색 서비스(API사용)
