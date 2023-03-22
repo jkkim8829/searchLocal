@@ -8,6 +8,13 @@ cURL http://localhost:8080/search?query=검색어
 2. 검색키워드 목록
 cURL http://localhost:8080/popularSearch?date=3
 
+개발사항
+  - 멀티모듈 사용
+  - 저장소 h2 InmemoryDB사용
+  - Java11 / SpringBoot / Gradle사용
+  - 설계를 통한 동시성 이슈 처리(키워드 검색 날짜 추가)
+  - 대용량 트래픽을 위한 WebClient사용(비동기 처리)
+
 명세서
 1. 장소 검색 서비스(API사용)
   - URI : /search
@@ -27,3 +34,4 @@ cURL http://localhost:8080/popularSearch?date=3
   - respones : Json형식
                searchWord : 검색키워드
                searchCount : 검색 횟수
+
