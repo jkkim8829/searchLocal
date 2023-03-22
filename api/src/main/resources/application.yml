@@ -1,0 +1,14 @@
+kakao:
+  api:
+    base-url: https://dapi.kakao.com
+    local-path: /v2/local/search/keyword
+    header-name: Authorization
+    header-value: KakaoAK 5d15d7d44a55512cd7c8556c756ed20e
+naver:
+  api:
+    base-url: https://openapi.naver.com
+    local-path: /v1/search/local.json
+    header-id: X-Naver-Client-Id
+    header-secret: X-Naver-Client-Secret
+    header-id-value: kUPLw15lwhiXbRWDv0dM
+    header-secret-value: 69mXOoatWY
